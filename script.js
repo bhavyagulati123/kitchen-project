@@ -1,83 +1,103 @@
+// &#8377;169
+const menu = [
+  {
+    dish: "Home made Pizza",
+    price: 169,
+    rating: "4.4",
+    img: "./images/pizza1.png",
+  },
+  {
+    dish: "Margherita Pizza",
+    price: 149,
+    rating: "4.2",
+    img: "./images/pizza2.png",
+  },
+  {
+    dish: "Farmhouse Pizza",
+    price: 199,
+    rating: "4.6",
+    img: "./images/pizza3.png",
+  },
+  {
+    dish: "Pepperoni Blast Pizza",
+    price: 229,
+    rating: "4.5",
+    img: "./images/pizza4.png",
+  },
+  {
+    dish: "Spicy Veggie Pizza",
+    price: 179,
+    rating: "4.3",
+    img: "./images/pizza12.png",
+  },
+  {
+    dish: "BBQ Chicken Pizza",
+    price: 249,
+    rating: "4.7",
+    img: "./images/pizza5.png",
+  },
+  {
+    dish: "Paneer Tikka Pizza",
+    price: 209,
+    rating: "4.4",
+    img: "./images/pizza6.png",
+  },
+  {
+    dish: "Mushroom Delight Pizza",
+    price: 189,
+    rating: "4.2",
+    img: "./images/pizza7.png",
+  },
+  {
+    dish: "Four Cheese Pizza",
+    price: 239,
+    rating: "4.6",
+    img: "./images/pizza8.png",
+  },
+  {
+    dish: "Mexican Wave Pizza",
+    price: 199,
+    rating: "4.3",
+    img: "./images/pizza9.png",
+  },
+  {
+    dish: "Peri Peri Pizza",
+    price: 219,
+    rating: "4.5",
+    img: "./images/pizza10.png",
+  },
+  {
+    dish: "Cheesy Garlic Pizza",
+    price: 169,
+    rating: "4.1",
+    img: "./images/pizza11.png",
+  },
+];
+function renderMenu() {
+  const cont = document.body.querySelector(".product-grid");
+  const template = document.body.querySelector(".product-card-grid").content;
+  menu.forEach((item) => {
+    // let price=`&#8377` + item.price;
+    let price = `${item.price}`;
 
-// html, body {
-//   margin: 0;
-//   padding: 0;
-//   color: var(--color-text);
-//   background: #fff;
-//   font-family: var(--font-family-base);
-//   box-sizing: border-box;
-// }
-
-// *, *::before, *::after {
-//   box-sizing: inherit;
-// }
-
-// #top_section {
-//   background-color: var(--color-primary);
-//   height: 100vh;
-// }
-
-// .navbar {
-//   display: flex;
-//   padding: var(--navbar-padding-vertical) 0;
-//   justify-content: space-between;
-//   align-items: center;
-//   margin: 0 auto;
-//   max-width: var(--navbar-max-width);
-// }
-
-// .navbar-logo { /* Add class="navbar-logo" to your logo img */
-//   max-width: 100%;
-//   height: auto;
-// }
-
-// .nav_section {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   width: var(--nav-section-width);
-//   min-width: 250px;
-//   gap: var(--spacing-gap);
-// }
-
-// .nav_list {
-//   display: flex;
-//   list-style: none;
-//   gap: var(--spacing-gap);
-//   margin: 0;
-//   padding: 0;
-// }
-
-// .nav_list > li > a {
-//   text-decoration: none;
-//   color: var(--color-text);
-//   font-weight: var(--font-weight-regular);
-//   font-size: var(--font-size-base);
-//   line-height: var(--line-height-base);
-//   letter-spacing: var(--letter-spacing-base);
-//   cursor: pointer;
-//   transition: color 0.3s ease;
-//   outline: none;
-// }
-
-// .nav_list > li > a:hover,
-// .nav_list > li > a:focus-visible {
-//   color: var(--color-accent);
-//   outline: none;
-// }
-
-// .nav_icon > img {
-//   margin-right: 1.25rem;          /* 20px */
-//   max-width: 100%;
-//   height: auto;
-//   cursor: pointer;
-//   transition: filter 0.3s ease;
-//   filter: brightness(1);
-// }
-
-// .nav_icon > img:hover,
-// .nav_icon > img:focus-visible {
-//   /* Custom filter to approx. accent color; adjust for best match or switch to SVG for full control */
-//   filter: brightness(0) saturate(100%) invert(79%) sepia(92%) saturate(2293%) hue-rotate(0deg) brightness(104%) contrast(97%);
-//   outline: none;
-// }
+    const clone = template.cloneNode(true);
+    clone.querySelector(".product-card__header >p:first-child").textContent =
+      item.dish;
+    clone.querySelector(".product-card__image-container img").src = item.img;
+    clone.querySelector(".product-card__header >p:last-child").textContent =
+      price;
+    cont.appendChild(clone);
+  });
+}
+renderMenu();
+const swiper = new Swiper(".swiper", {
+  direction: "vertical",
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});

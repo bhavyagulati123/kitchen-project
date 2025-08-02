@@ -15,6 +15,10 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <section id="top_section">
@@ -44,20 +48,21 @@
       </navbar>
       <header class="landing_section">
         <div class="landing_section_cont">
-
           <div class="left_section">
-            <h1>Authentic Home <span style="display: block;">food in India</span></h1>
+            <h1>
+              Authentic Home <span style="display: block">food in India</span>
+            </h1>
             <p>
-              JTGeats is a courier service in which authentic home  <span style="display: block;"></span>cook food is
-              delivered to a customer. </span>
+              JTGeats is a courier service in which authentic home
+              <span style="display: block"
+                >cook food is delivered to a customer.
+              </span>
             </p>
             <div class="search_section">
               <input
-              id="form_input"
-              
-              type="text"
-              placeholder="Search food you love"
-              
+                id="form_input"
+                type="text"
+                placeholder="Search food you love"
               />
               <button class="search_btn">Search</button>
             </div>
@@ -72,39 +77,68 @@
     <section id="kitchen_section">
       <div class="kitchen_cont">
         <h1>Home kitchen</h1>
-        
-       <div class="product-grid">
-  <div class="product-card">
-    <div class="product-card__image-container">
-      <img src="./images/pizza1.png" alt="Pizza Image">
-    </div>
-    
-    <div class="product-card__details-container">
-      <div class="product-card__header">
-        <p>Home made pizza</p>
-        <p>&#8377;169</p>
-      </div>
-      <div class="product-card__footer">
-        <div class="product-card__meta">
-          <div class="product-card__rating">
-            <img src="./images/star.svg" alt="star icon">
-            <p>4.7</p>
+
+        <div class="product-grid"></div>
+        <template class="product-card-grid">
+          <div class="product-card">
+            <div class="product-card__image-container">
+              <img src="" alt="Pizza Image" />
+            </div>
+
+            <div class="product-card__details-container">
+              <div class="product-card__header">
+                <p>Home made pizza</p>
+                <p>&#8377;169</p>
+              </div>
+              <div class="product-card__footer">
+                <div class="product-card__meta">
+                  <div class="product-card__rating">
+                    <img src="./images/star.svg" alt="star icon" />
+                    <p>4.7</p>
+                  </div>
+                  <div class="product-card__delivery-time">
+                    <p>50-79 min</p>
+                  </div>
+                </div>
+                <div class="product-card__add-to-cart">
+                  <img src="./images/add_item.svg" alt="Plus Icon" />
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="product-card__delivery-time">
-            <p>50-79 min</p>
+        </template>
+      </div>
+
+      <div class="carousal">
+        <div class="swiper" style="width: 100%; height: 300px">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="/images/pizza1.png" alt="Pizza 1" />
+            </div>
+            <div class="swiper-slide">
+              <img src="/images/pizza11.png" alt="Pizza 11" />
+            </div>
+            <div class="swiper-slide">
+              <img src="/images/pizza7.png" alt="Pizza 7" />
+            </div>
+            <div class="swiper-slide">
+              <img src="/images/pizza7.png" alt="Pizza 7" />
+            </div>
+            <div class="swiper-slide">
+              <img src="/images/pizza7.png" alt="Pizza 7" />
+            </div>
           </div>
-        </div>
-        <div class="product-card__add-to-cart">
-          <img src="./images/add_item.svg" alt="Plus Icon">
+
+          <!-- Navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- Pagination dots -->
+          <div class="swiper-pagination"></div>
         </div>
       </div>
-    </div>
-  </div>
-  
-  </div>
-      </div>
-      <div class="carousal">Corousal</div>
     </section>
     <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   </body>
 </html>
