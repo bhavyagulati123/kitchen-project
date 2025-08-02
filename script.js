@@ -19,7 +19,7 @@ const menu = [
     img: "./images/pizza3.png",
   },
   {
-    dish: "Pepperoni Blast Pizza",
+    dish: "Pepperoni Pizza",
     price: 229,
     rating: "4.5",
     img: "./images/pizza4.png",
@@ -43,7 +43,7 @@ const menu = [
     img: "./images/pizza6.png",
   },
   {
-    dish: "Mushroom Delight Pizza",
+    dish: "Mushroom Pizza",
     price: 189,
     rating: "4.2",
     img: "./images/pizza7.png",

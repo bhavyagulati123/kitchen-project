@@ -205,7 +205,7 @@
 .product-grid {
     margin: 64px auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
     gap: 15px;
     max-width: var(--section-max-width);
 }
