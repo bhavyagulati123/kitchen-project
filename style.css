@@ -174,14 +174,14 @@ body {
 }
 
 .kitchen_cont {
-  margin: 50px auto;
+  margin: 70px auto;
   margin-bottom: 0;
   width: 100%;
 }
 
 .kitchen_cont > h1 {
   max-width: var(--section-max-width);
-  margin: 0 auto;
+  margin: 0px auto;
   font-family: var(--font-family-secondary);
   font-weight: 800;
   font-size: clamp(2rem, 2vw + 1rem, 2.5rem);
@@ -191,7 +191,7 @@ body {
 }
 
 .product-grid {
-  margin: 64px auto;
+  margin: 50px auto;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   gap: 15px;
@@ -234,7 +234,7 @@ body {
 }
 
 .product-card__header {
-  font-size: clamp(1rem, 1.2vw + 0.8rem, 1.25rem);
+  font-size: clamp(1rem, 1.2vw + 0.8rem, 1.1rem);
   font-weight: 400;
   line-height: 1.25;
   letter-spacing: -0.012em;
@@ -321,7 +321,7 @@ body {
 
 /* Hover state for carousel cards */
 .swiper-slide-active .product-card {
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
   z-index: 10;
 }
@@ -329,7 +329,7 @@ body {
   color: white;
 }
 .product-card:hover {
-  transform: scale(1.05);
+  /* transform: scale(1.05); */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
