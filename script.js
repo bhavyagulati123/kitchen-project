@@ -1,4 +1,4 @@
-// &#8377;169
+// 169
 const menu = [
   {
     dish: "Home made Pizza",
@@ -77,15 +77,11 @@ function renderMenu() {
   const cont = document.body.querySelector(".product-grid");
   const template = document.body.querySelector(".product-card-grid").content;
   menu.forEach((item) => {
-    // let price=`&#8377` + item.price;
-    let price = `${item.price}`;
-
     const clone = template.cloneNode(true);
-    clone.querySelector(".product-card__header >p:first-child").textContent =
-      item.dish;
     clone.querySelector(".product-card__image-container img").src = item.img;
-    clone.querySelector(".product-card__header >p:last-child").textContent =
-      price;
+    clone.querySelector(".product-card__header >p:first-child").textContent =item.dish;
+    clone.querySelector(".product-card__header-para").innerHTML= '&#8377;' + item.price;
+    clone.querySelector(".product-card__rating>p").textContent=item.rating;
     cont.appendChild(clone);
   });
 }
