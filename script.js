@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Initialize Swiper
   const swiper = new Swiper(".product-carousel", {
-    loop: true,
+    // loop: true,
     slidesPerView: 3,
     spaceBetween: 25,
     centeredSlides: true,
