@@ -1,6 +1,8 @@
 :root {
+  
+
   --color-text: #f2f2f2;
-  --color-primary: #1ac073;
+  --color-primary: #1AC073;
   --color-secondary: #2ebf91;
   --color-accent: #f0faf7;
   --color-offWhite: #F7F8FA;
@@ -36,7 +38,7 @@ body {
 /* -------------------- Landing Section --------------------- */
 
 #top_section {
-  background-color: #1ac073;
+  background-color: var(--color-primary);
 }
 
 .navbar {
@@ -79,7 +81,7 @@ body {
 
 .nav_icon>img {
   margin-right: 1.25rem;
-  /* 20px */
+  
   max-width: 100%;
   height: auto;
   cursor: pointer;
@@ -108,7 +110,7 @@ body {
   align-content: center;
   position: relative;
   top: 1.25rem;
-  /* 20px */
+  
 }
 
 .left_section>h1 {
@@ -132,7 +134,7 @@ body {
   max-width: 79%;
   display: flex;
   border-radius: 0.625rem;
-  /* 10px */
+  
   background-color: var(--color-neutral);
 }
 
@@ -155,7 +157,7 @@ body {
 .search_btn {
   color: white;
   font-size: 1rem;
-  /* 16px */
+  
   margin: 0;
   border: 0;
   outline: 0;
@@ -205,7 +207,7 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(16.875rem, 1fr));
   /* 270px */
   gap: 0.9375rem;
-  /* 15px */
+  
   max-width: var(--section-max-width);
 }
 
@@ -216,7 +218,7 @@ body {
 /* ------------ Product Card Styles --------------- */
 .product-card {
   border-radius: 0.625rem;
-  /* 10px */
+  
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -273,14 +275,14 @@ body {
 
 .product-card__rating>img {
   width: 0.75rem;
-  /* 12px */
+  
   height: 0.75rem;
-  /* 12px */
+  
 }
 
 .product-card__delivery-time {
   border-radius: 0.3125rem;
-  /* 5px */
+  
   padding: 0 0.25rem;
   /* 4px */
   background-color: #bebebe;
@@ -290,7 +292,7 @@ body {
   padding: 0 0.25rem;
   /* 4px */
   border-radius: 0.3125rem;
-  /* 5px */
+  
   background-color: #f7f8fa;
   height: 100%;
 }
@@ -302,7 +304,7 @@ body {
   line-height: 1.67;
   letter-spacing: -0.012em;
   border-radius: 0.3125rem;
-  /* 5px */
+  
 }
 
 .product-card__meta {
@@ -440,11 +442,11 @@ body {
   /* 210px */
   height: 3rem;
   /* 48px */
-  background-color: #1ac073;
+  background-color: var(--color-primary);
   color: white;
   border: none;
   border-radius: 0.625rem;
-  /* 10px */
+  
   font-size: 1rem;
   font-family: var(--font-family-secondary);
   font-weight: bold;
@@ -453,8 +455,8 @@ body {
 
 .action-btn:hover {
   background-color: transparent;
-  color: #1ac073;
-  border: 0.125rem solid #1ac073;
+  color: var(--color-primary);
+  border: 0.125rem solid var(--color-primary);
   /* 2px */
 }
 
@@ -462,15 +464,15 @@ body {
 .discount-badge {
   position: absolute;
   top: 0.625rem;
-  /* 10px */
+  
   left: 0.625rem;
-  /* 10px */
-  background-color: #1ac073;
+  
+  background-color: var(--color-primary);
   color: white;
   padding: 0.25rem 0.5rem;
-  /* 4px 8px */
+
   border-radius: 0.25rem;
-  /* 4px */
+
   font-weight: bold;
   z-index: 5;
   display: none;
@@ -499,14 +501,14 @@ body {
 .modal-content {
   background-color: white;
   padding: 1.875rem;
-  /* 30px */
+
   border-radius: 0.625rem;
-  /* 10px */
+  
   max-width: 31.25rem;
-  /* 500px */
+
   width: 90%;
   box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.3);
-  /* 5px 15px */
+
 }
 
 .modal-content * {
@@ -518,7 +520,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.25rem;
-  /* 20px */
+  
 }
 
 .modal-header h3 {
@@ -539,56 +541,56 @@ body {
 
 .modal-form label {
   margin-bottom: 0.3125rem;
-  /* 5px */
+  
   font-weight: bold;
 }
 
 .modal-form input,
 .modal-form textarea {
   padding: 0.625rem;
-  /* 10px */
+  
   margin-bottom: 0.9375rem;
-  /* 15px */
+  
   border: 0.0625rem solid #ccc;
-  /* 1px */
+  
   border-radius: 0.3125rem;
-  /* 5px */
+  
 }
 
 .modal-footer {
   display: flex;
   justify-content: flex-end;
   gap: 0.625rem;
-  /* 10px */
+  
   margin-top: 1.25rem;
-  /* 20px */
+  
 }
 
 .modal-btn {
   padding: 0.625rem 1.25rem;
-  /* 10px 20px */
+
   border-radius: 0.3125rem;
-  /* 5px */
+  
   cursor: pointer;
-  border: 0.5rem solid #1ac073;
-  /* 8px, presumably you meant 0.5px or 0.05rem? Maybe keep as 0.5rem if desired */
+  
   font-weight: bold;
 }
 
 #cancel-modal-btn {
+  border: 1px solid black ;
   background-color: #fff;
-  color: #1ac073;
+  color: var(--color-primary);
 }
 
 #submit-modal-btn {
-  background-color: #1ac073;
+  background-color: var(--color-primary);
   color: #fff;
 }
 
 /* ------------ Video Section --------------- */
 
 .vedio_cont {
-  /* width: 100vw; */
+
   height: 100vh;
   background-color: #fafafa;
   position: relative;
@@ -602,7 +604,7 @@ body {
   background: #c7eacc;
   height: 40%;
 
-  /* Attention */
+
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -615,7 +617,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 50vw;
-  gap: 0.65rem;
+  gap: 3.125rem;
   /* replaced 3.125rem with 0.65rem? Verify if intentional, original was 3.125rem in previous code */
   max-width: var(--section-max-width);
   font-family: var(--font-family-secondary);
@@ -623,11 +625,11 @@ body {
 
 .vedio_h2_tag {
   font-size: 2.5rem;
-  /* 40px */
+
   line-height: 3.5625rem;
-  /* 57px */
+
   letter-spacing: 0.0125rem;
-  /* 0.2px */
+
   font-weight: 700;
   color: black;
   text-align: center;
@@ -637,11 +639,11 @@ body {
   color: #737373;
   font-weight: 500;
   font-size: 0.875rem;
-  /* 14px */
+
   line-height: 1.25rem;
-  /* 20px */
+  
   letter-spacing: 0.0125rem;
-  /* 0.2px */
+
   text-align: center;
   margin: 0 auto;
   max-width: 59%;
@@ -651,14 +653,14 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.65rem;
-  /* 10.4px */
+
 }
 
 .video-player {
   position: relative;
   overflow: hidden;
   border-radius: 0.625rem;
-  /* 10px */
+  
 }
 
 .video-player video {
@@ -682,12 +684,11 @@ body {
   opacity: 0;
 }
 
-/* Hide controls on hover, but make sure they're visible initially */
+
 .video-player:hover .controls {
   opacity: 1;
 }
 
-/* Show controls when the video is paused */
 .video-player.paused .controls {
   opacity: 1;
 }
@@ -712,27 +713,22 @@ body {
   transform: scale(1.1);
 }
 
-
-
 .form {
-  /* width: 100vw; */
-  /* height: 100vh; */
-  padding: 100px 129px;
+  padding: 6.25rem 8.0625rem; 
   background-color: var(--color-offWhite);
 }
 
 .form_cont {
   width: 100%;
-  /* height: 603px; */
   background-color: transparent;
   display: flex;
-  gap: 103px;
+  gap: 6.4375rem;
 }
 
 .form_section {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 1.5625rem; 
   flex: 1;
 }
 
@@ -743,52 +739,47 @@ body {
 .form_text_cont {
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  
+  gap: 0.3125rem; 
 }
 
 .form_heading {
   font-family: var(--font-family-secondary);
   font-weight: 400;
-  font-size: 24px;
-  line-height: 24px;
-  /* letter-spacing: -1.2%; */
-  
+  font-size: 1.5rem; 
+  line-height: 1.5rem; 
+  letter-spacing: -1.2%;
 }
 
 .form_para {
   font-family: var(--font-family-secondary);
   font-weight: 400;
-  font-size: 12px;
-  line-height: 20px;
-  /* max-width: 30%; */
-  /* letter-spacing: -1.2%; */
-
+  font-size: 0.75rem; 
+  line-height: 1.25rem; 
+  
+  letter-spacing: -1.2%;
 }
 
-.form_section>form {
+.form_section > form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.25rem; 
 }
 
-.form_section>form * {
+.form_section > form * {
   color: black;
 }
 
 .form_header {
   display: flex;
-  gap: 10px;
-
+  gap: 0.625rem; 
 }
 
 .form_input {
-  padding: 10px 5px 10px 18px;
+  padding: 0.625rem 0.3125rem 0.625rem 1.125rem;
   flex: 1;
   border: 0;
-  border-radius: 10px;
+  border-radius: 0.625rem; 
   outline: 0;
-  /* background-color: var(--color-text); */
 }
 
 .text_area_cont {
@@ -796,63 +787,62 @@ body {
 }
 
 #form_textarea {
-  padding: 10px 10px 10px 10px;
+  padding: 0.625rem; 
   border: 0;
   outline: none;
-  height: 164px;
+  height: 10.25rem;
   width: 100%;
-  /* width: 100%; */
   resize: none;
-  border-radius: 10px;
+  border-radius: 0.625rem; 
 }
 
-
-
-.food_img{
+.food_img {
   flex: 0.9;
 }
 
-.form_submit{
-padding: 0;
-margin: 0;
-/* display: block; */
+.form_submit {
+  padding: 0;
+  margin: 0;
 }
-.form_submit .form_button{
-color: var(--color-offWhite);
-font-weight: 400;
-font-size: 16px;
+
+.form_submit .form_button {
+  color: var(--color-offWhite);
+  font-weight: 400;
+  font-size: 1rem; 
 }
-.form_submit .form_button:hover{
+
+.form_submit .form_button:hover {
   color: black;
 }
 
-.food_img img{
+.food_img img {
   width: 100%;
   height: 100%;
-  object-fit:contain;
+  object-fit: contain;
   object-position: center center;
 }
-footer{
+
+footer {
   background-color: var(--color-primary);
-      padding-bottom: 20px;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
+  padding-bottom: 1.25rem; 
 }
-.foot_icon img{
+
+.foot_icon img {
   background-color: white;
-  padding: 5px;
-  border-radius: 5px;
-  width: 27px;
-  height: 25px;
+  padding: 0.3125rem; 
+  border-radius: 0.3125rem; 
+  width: 1.6875rem; 
+  height: 1.5625rem; 
   text-align: center;
 }
-.hr{
+
+.hr {
   width: 100%;
   max-width: var(--section-max-width);
   margin: 0 auto;
-  border-top: 1px solid white;
+  border-top: 0.0625rem solid white; 
 }
-footer >.nav_footer{
-padding-bottom: 15px;
+
+footer > .nav_footer {
+  padding-bottom: 0.9375rem; 
 }
