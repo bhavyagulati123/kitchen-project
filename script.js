@@ -187,3 +187,50 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  const video = document.getElementById('myVideo');
+  const playPauseBtn = document.getElementById('play-pause-btn');
+  const videoPlayer = document.querySelector('.video-player');
+
+  function togglePlayPause() {
+    if (video.paused || video.ended) {
+      video.play();
+      videoPlayer.classList.remove('paused');
+    } else {
+      video.pause();
+      videoPlayer.classList.add('paused');
+    }
+  }
+
+  // Event listener for the custom button
+  playPauseBtn.addEventListener('click', togglePlayPause);
+  
+  // Event listener for the video itself (clicking the video also toggles)
+  video.addEventListener('click', togglePlayPause);
+
+  // Event listener to change the button icon
+  video.addEventListener('play', () => {
+    playPauseBtn.innerHTML = '';
+    videoPlayer.classList.remove('paused');
+  });
+
+  video.addEventListener('pause', () => {
+    playPauseBtn.innerHTML = '<img src="/images/plaay.svg" alt="">';
+    videoPlayer.classList.add('paused');
+  });
+
+  // Event listener to reset the icon when the video ends
+  video.addEventListener('ended', () => {
+    playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
+    videoPlayer.classList.add('paused');
+  });
+});
+
+

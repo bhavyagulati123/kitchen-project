@@ -3,6 +3,7 @@
   --color-primary: #1ac073;
   --color-secondary: #2ebf91;
   --color-accent: #f0faf7;
+  --color-offWhite: #F7F8FA;
   --color-neutral: #f3ba00;
   --font-family-base: 'Open Sans', Arial, Helvetica, sans-serif;
   --font-family-secondary: 'Roboto', Arial, Helvetica, sans-serif;
@@ -40,15 +41,15 @@ body {
 
 .navbar {
   display: flex;
-  padding: var(--navbar-padding-vertical) 0px;
+  padding: var(--navbar-padding-vertical) 0;
   justify-content: space-between;
   align-items: center;
-  margin: 0px auto;
+  margin: 0 auto;
   max-width: var(--section-max-width);
 }
 
-.navbar > div > img,
-.left_section > img {
+.navbar>div>img,
+.left_section>img {
   max-width: 100%;
   height: auto;
 }
@@ -66,7 +67,7 @@ body {
   gap: 2.5rem;
 }
 
-.nav_list > li > a {
+.nav_list>li>a {
   font-weight: var(--font-weight-regular);
   font-size: var(--font-size-base);
   line-height: 1.25rem;
@@ -76,8 +77,9 @@ body {
   color: var(--color-text);
 }
 
-.nav_icon > img {
-  margin-right: 20px;
+.nav_icon>img {
+  margin-right: 1.25rem;
+  /* 20px */
   max-width: 100%;
   height: auto;
   cursor: pointer;
@@ -105,10 +107,11 @@ body {
   gap: 2rem;
   align-content: center;
   position: relative;
-  top: 20px;
+  top: 1.25rem;
+  /* 20px */
 }
 
-.left_section > h1 {
+.left_section>h1 {
   flex-wrap: nowrap;
   font-family: var(--font-family-secondary);
   font-weight: 400;
@@ -117,7 +120,7 @@ body {
   letter-spacing: 0;
 }
 
-.left_section > p {
+.left_section>p {
   font-family: var(--font-family-secondary);
   font-weight: var(--font-weight-regular);
   font-size: var(--font-size-base);
@@ -128,18 +131,21 @@ body {
 .search_section {
   max-width: 79%;
   display: flex;
-  border-radius: 10px;
+  border-radius: 0.625rem;
+  /* 10px */
   background-color: var(--color-neutral);
 }
 
 #form_input {
   width: 80%;
-  padding: 19px 29px;
+  padding: 1.1875rem 1.8125rem;
+  /* 19px 29px */
   color: black;
   margin: 0;
   border: 0;
   outline: 0;
-  border-radius: 10px 0 0 10px;
+  border-radius: 0.625rem 0 0 0.625rem;
+  /* 10px 0 0 10px */
 }
 
 #form_input::placeholder {
@@ -148,11 +154,13 @@ body {
 
 .search_btn {
   color: white;
-  font-size: 16px;
+  font-size: 1rem;
+  /* 16px */
   margin: 0;
   border: 0;
   outline: 0;
-  padding: 19px 29px;
+  padding: 1.1875rem 1.8125rem;
+  /* 19px 29px */
   background-color: transparent;
 }
 
@@ -160,7 +168,7 @@ body {
   width: fit-content;
 }
 
-.right_section > img {
+.right_section>img {
   max-width: 100%;
   height: auto;
 }
@@ -174,14 +182,14 @@ body {
 }
 
 .kitchen_cont {
-  margin: 70px auto;
-  margin-bottom: 0;
+  margin: 4.375rem auto 0 auto;
+  /* 70px 0 0 0 */
   width: 100%;
 }
 
-.kitchen_cont > h1 {
+.kitchen_cont>h1 {
   max-width: var(--section-max-width);
-  margin: 0px auto;
+  margin: 0 auto;
   font-family: var(--font-family-secondary);
   font-weight: 800;
   font-size: clamp(2rem, 2vw + 1rem, 2.5rem);
@@ -191,10 +199,13 @@ body {
 }
 
 .product-grid {
-  margin: 50px auto;
+  margin: 3.125rem auto;
+  /* 50px */
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(16.875rem, 1fr));
+  /* 270px */
+  gap: 0.9375rem;
+  /* 15px */
   max-width: var(--section-max-width);
 }
 
@@ -204,7 +215,8 @@ body {
 
 /* ------------ Product Card Styles --------------- */
 .product-card {
-  border-radius: 10px;
+  border-radius: 0.625rem;
+  /* 10px */
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -214,7 +226,8 @@ body {
 }
 
 .product-card__details-container {
-  padding: 20px 24px;
+  padding: 1.25rem 1.5rem;
+  /* 20px 24px */
   gap: 0.8rem;
   display: flex;
   flex-direction: column;
@@ -252,24 +265,32 @@ body {
   gap: 0.25rem;
   align-items: center;
   padding: 0 0.25rem;
-  border-radius: 4px;
+  /* 4px */
+  border-radius: 0.25rem;
+  /* 4px */
   box-shadow: 0 0px 1px rgba(0, 0, 0, 0.25);
 }
 
-.product-card__rating > img {
-  width: 12px;
-  height: 12px;
+.product-card__rating>img {
+  width: 0.75rem;
+  /* 12px */
+  height: 0.75rem;
+  /* 12px */
 }
 
 .product-card__delivery-time {
   border-radius: 0.3125rem;
+  /* 5px */
   padding: 0 0.25rem;
+  /* 4px */
   background-color: #bebebe;
 }
 
 .product-card__delivery-time p {
   padding: 0 0.25rem;
-  border-radius: 5px;
+  /* 4px */
+  border-radius: 0.3125rem;
+  /* 5px */
   background-color: #f7f8fa;
   height: 100%;
 }
@@ -280,12 +301,14 @@ body {
   font-size: clamp(0.75rem, 0.5vw + 0.6rem, 0.875rem);
   line-height: 1.67;
   letter-spacing: -0.012em;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
+  /* 5px */
 }
 
 .product-card__meta {
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
+  /* 4px */
 }
 
 .product-card__add-to-cart {
@@ -295,45 +318,55 @@ body {
 
 /* ------------ Carousel Section --------------- */
 .carousel-section {
-  padding: 80px 0;
+  /* padding: 5rem 0; */
   padding-top: 0;
+  margin-top: 1.875rem;
+  /* 30px */
   text-align: center;
   background-color: #f8f8f8;
   position: relative;
   max-width: var(--section-max-width);
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 2.5rem;
+  /* 40px */
 }
+
 .carousel-section * {
   color: black;
 }
+
 .carousel-heading h2 {
   font-family: 'Roboto', sans-serif;
   font-size: clamp(2rem, 2vw + 1rem, 2.5rem);
   font-weight: 700;
   color: #333;
-  margin-bottom: 60px;
+  /* margin-bottom: 3.75rem; */
 }
 
 .product-carousel {
   max-width: 65vw;
-  height: 100%
+  height: 100%;
 }
 
 /* Hover state for carousel cards */
 .swiper-slide-active .product-card {
   /* transform: scale(1.1); */
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.9375rem 1.875rem rgba(0, 0, 0, 0.1);
+  /* 15px 30px */
   z-index: 10;
 }
+
 .swiper-slide-active .product-card .discount-badge {
   color: white;
 }
+
 .product-card:hover {
   /* transform: scale(1.05); */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.1);
+  /* 10px 20px */
 }
 
 /* Styling for the custom navigation arrows */
@@ -347,11 +380,14 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  border: 2px solid #169e5d;
+  border: 0.125rem solid #169e5d;
+  /* 2px */
 }
+
 .custom-nav-btn.swiper-button-prev {
   left: -11%;
 }
+
 .custom-nav-btn.swiper-button-next {
   right: -10%;
 }
@@ -370,8 +406,10 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 37px;
-  height: 21px;
+  width: 2.3125rem;
+  /* 37px */
+  height: 1.3125rem;
+  /* 21px */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -392,17 +430,21 @@ body {
   box-sizing: border-box;
 }
 
-/* Action button at the bottom */
 .action-btn-container {
-  margin: 50px auto;
+  margin: 3.125rem auto;
+  /* 50px */
 }
+
 .action-btn {
-  width: 210px;
-  height: 48px;
+  width: 13.125rem;
+  /* 210px */
+  height: 3rem;
+  /* 48px */
   background-color: #1ac073;
   color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: 0.625rem;
+  /* 10px */
   font-size: 1rem;
   font-family: var(--font-family-secondary);
   font-weight: bold;
@@ -412,23 +454,28 @@ body {
 .action-btn:hover {
   background-color: transparent;
   color: #1ac073;
-  border: 2px solid #1ac073;
+  border: 0.125rem solid #1ac073;
+  /* 2px */
 }
 
 /* Discount badge */
 .discount-badge {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 0.625rem;
+  /* 10px */
+  left: 0.625rem;
+  /* 10px */
   background-color: #1ac073;
   color: white;
-  padding: 4px 8px;
-  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  /* 4px 8px */
+  border-radius: 0.25rem;
+  /* 4px */
   font-weight: bold;
   z-index: 5;
-  display: none; /* Initially hide the badge */
+  display: none;
 }
-/* Show the discount badge on the active/hovered card */
+
 .swiper-slide-active .discount-badge,
 .product-card:hover .discount-badge {
   display: block;
@@ -451,11 +498,15 @@ body {
 
 .modal-content {
   background-color: white;
-  padding: 30px;
-  border-radius: 10px;
-  max-width: 500px;
+  padding: 1.875rem;
+  /* 30px */
+  border-radius: 0.625rem;
+  /* 10px */
+  max-width: 31.25rem;
+  /* 500px */
   width: 90%;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.3);
+  /* 5px 15px */
 }
 
 .modal-content * {
@@ -466,7 +517,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
+  /* 20px */
 }
 
 .modal-header h3 {
@@ -476,7 +528,7 @@ body {
 }
 
 .close-modal-btn {
-  font-size: 24px;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 
@@ -486,30 +538,40 @@ body {
 }
 
 .modal-form label {
-  margin-bottom: 5px;
+  margin-bottom: 0.3125rem;
+  /* 5px */
   font-weight: bold;
 }
 
 .modal-form input,
 .modal-form textarea {
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  padding: 0.625rem;
+  /* 10px */
+  margin-bottom: 0.9375rem;
+  /* 15px */
+  border: 0.0625rem solid #ccc;
+  /* 1px */
+  border-radius: 0.3125rem;
+  /* 5px */
 }
 
 .modal-footer {
   display: flex;
   justify-content: flex-end;
-  gap: 10px;
-  margin-top: 20px;
+  gap: 0.625rem;
+  /* 10px */
+  margin-top: 1.25rem;
+  /* 20px */
 }
 
 .modal-btn {
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 0.625rem 1.25rem;
+  /* 10px 20px */
+  border-radius: 0.3125rem;
+  /* 5px */
   cursor: pointer;
-  border: 1px solid #1ac073;
+  border: 0.5rem solid #1ac073;
+  /* 8px, presumably you meant 0.5px or 0.05rem? Maybe keep as 0.5rem if desired */
   font-weight: bold;
 }
 
@@ -521,4 +583,276 @@ body {
 #submit-modal-btn {
   background-color: #1ac073;
   color: #fff;
+}
+
+/* ------------ Video Section --------------- */
+
+.vedio_cont {
+  /* width: 100vw; */
+  height: 100vh;
+  background-color: #fafafa;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -10;
+}
+
+.green_background {
+  background: #c7eacc;
+  height: 40%;
+
+  /* Attention */
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+
+.content_event {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  gap: 0.65rem;
+  /* replaced 3.125rem with 0.65rem? Verify if intentional, original was 3.125rem in previous code */
+  max-width: var(--section-max-width);
+  font-family: var(--font-family-secondary);
+}
+
+.vedio_h2_tag {
+  font-size: 2.5rem;
+  /* 40px */
+  line-height: 3.5625rem;
+  /* 57px */
+  letter-spacing: 0.0125rem;
+  /* 0.2px */
+  font-weight: 700;
+  color: black;
+  text-align: center;
+}
+
+.vedio_para_tag {
+  color: #737373;
+  font-weight: 500;
+  font-size: 0.875rem;
+  /* 14px */
+  line-height: 1.25rem;
+  /* 20px */
+  letter-spacing: 0.0125rem;
+  /* 0.2px */
+  text-align: center;
+  margin: 0 auto;
+  max-width: 59%;
+}
+
+.text_content_inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  /* 10.4px */
+}
+
+.video-player {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.625rem;
+  /* 10px */
+}
+
+.video-player video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  opacity: 0;
+}
+
+/* Hide controls on hover, but make sure they're visible initially */
+.video-player:hover .controls {
+  opacity: 1;
+}
+
+/* Show controls when the video is paused */
+.video-player.paused .controls {
+  opacity: 1;
+}
+
+#play-pause-btn {
+  background: transparent;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+  /* 32px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#play-pause-btn:hover {
+  transform: scale(1.1);
+}
+
+
+
+.form {
+  /* width: 100vw; */
+  /* height: 100vh; */
+  padding: 100px 129px;
+  background-color: var(--color-offWhite);
+}
+
+.form_cont {
+  width: 100%;
+  /* height: 603px; */
+  background-color: transparent;
+  display: flex;
+  gap: 103px;
+}
+
+.form_section {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  flex: 1;
+}
+
+.form_section * {
+  color: black;
+}
+
+.form_text_cont {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  
+}
+
+.form_heading {
+  font-family: var(--font-family-secondary);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  /* letter-spacing: -1.2%; */
+  
+}
+
+.form_para {
+  font-family: var(--font-family-secondary);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  /* max-width: 30%; */
+  /* letter-spacing: -1.2%; */
+
+}
+
+.form_section>form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form_section>form * {
+  color: black;
+}
+
+.form_header {
+  display: flex;
+  gap: 10px;
+
+}
+
+.form_input {
+  padding: 10px 5px 10px 18px;
+  flex: 1;
+  border: 0;
+  border-radius: 10px;
+  outline: 0;
+  /* background-color: var(--color-text); */
+}
+
+.text_area_cont {
+  background-color: var(--color-offWhite);
+}
+
+#form_textarea {
+  padding: 10px 10px 10px 10px;
+  border: 0;
+  outline: none;
+  height: 164px;
+  width: 100%;
+  /* width: 100%; */
+  resize: none;
+  border-radius: 10px;
+}
+
+
+
+.food_img{
+  flex: 0.9;
+}
+
+.form_submit{
+padding: 0;
+margin: 0;
+/* display: block; */
+}
+.form_submit .form_button{
+color: var(--color-offWhite);
+font-weight: 400;
+font-size: 16px;
+}
+.form_submit .form_button:hover{
+  color: black;
+}
+
+.food_img img{
+  width: 100%;
+  height: 100%;
+  object-fit:contain;
+  object-position: center center;
+}
+footer{
+  background-color: var(--color-primary);
+      padding-bottom: 20px;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+}
+.foot_icon img{
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+  width: 27px;
+  height: 25px;
+  text-align: center;
+}
+.hr{
+  width: 100%;
+  max-width: var(--section-max-width);
+  margin: 0 auto;
+  border-top: 1px solid white;
+}
+footer >.nav_footer{
+padding-bottom: 15px;
 }

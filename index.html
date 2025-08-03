@@ -114,8 +114,14 @@
         <div class="swiper product-carousel">
           <div class="swiper-wrapper"></div>
         </div>
-        <div class="swiper-button-prev custom-nav-btn" style="width: 4.376rem; height:4.376rem" ></div>
-        <div class="swiper-button-next custom-nav-btn" style="width: 4.376rem; height:4.376rem" ></div>
+        <div
+          class="swiper-button-prev custom-nav-btn"
+          style="width: 4.376rem; height: 4.376rem"
+        ></div>
+        <div
+          class="swiper-button-next custom-nav-btn"
+          style="width: 4.376rem; height: 4.376rem"
+        ></div>
         <template id="product-card-template-carousel">
           <div class="swiper-slide">
             <div class="product-card">
@@ -153,6 +159,98 @@
         </div>
       </section>
     </section>
+
+    <section class="vedio_cont">
+      <div class="content_event">
+        <div class="text_content_inner">
+          <h2 class="vedio_h2_tag">
+            We are providing best
+            <span style="display: block; color: black">
+              home cooked food delivery service.</span
+            >
+          </h2>
+          <p class="vedio_para_tag">
+            Away from home and craving the tasty homemade recipes? Choose from a
+            selection of our delicious home cooked dishes
+          </p>
+        </div>
+
+        <div class="video-player">
+          <video id="myVideo">
+            <source src="/images/cooking-vedio.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="controls">
+            <button id="play-pause-btn" class="play-btn">
+              <img src="/images/plaay.svg" alt="play button" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="green_background"></div>
+    </section>
+
+    <section class="form">
+      <div class="form_cont">
+        <div class="form_section">
+          <div class="form_text_cont">
+
+            <h3 class="form_heading">Do you have a question <span style="display: block;"> or want to become a seller?</span></h3>
+            <p class="form_para">Fill this form and our manager will contact you next 48 hours.</p>
+          </div>
+          <form action="">
+            <div class="form_header">
+
+              <input type="text" class="form_input" placeholder="Your Name">
+              <input type="text" class="form_input" placeholder="Your Email">
+            </div>
+            <div class="text_area_cont">
+              <textarea name="textarea" id="form_textarea" placeholder="Your Message"></textarea>
+              
+            </div>
+            
+             <div class="action-btn-container form_submit">
+          <button class="action-btn form_button" id="request-dish-btn">
+            Submit
+          </button>
+        </div>
+          </form>
+
+        </div>
+        <div class="food_img">
+          <img src="/images/food_delivery.svg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <nav class="navbar nav_footer">
+        <div>
+          <img
+            class="navbar-logo"
+            src="./images/JTGeats.svg"
+            alt="JTGeats logo"
+          />
+        </div>
+        <div class="nav_section">
+          <div class="first_nav">
+            <ul class="nav_list">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#menu">Menu</a></li>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="nav_icon foot_icon">
+            <img src="./images/facebook.svg" alt="Search Icon" />
+            <img src="./images/insta.svg" alt="Shopping Cart Icon" />
+          </div>
+        </div>
+      </nav>
+      <div class="hr"></div>
+    </footer>
+
 
     <div id="request-modal" class="modal-overlay">
       <div class="modal-content">
