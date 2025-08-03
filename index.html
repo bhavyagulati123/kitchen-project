@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>JTGeats - Food Delivery</title>
     <link rel="stylesheet" href="./style.css" />
     <link
       rel="stylesheet"
@@ -22,7 +22,7 @@
   </head>
   <body>
     <section id="top_section">
-      <navbar class="navbar">
+      <nav class="navbar">
         <div>
           <img
             class="navbar-logo"
@@ -45,7 +45,7 @@
             <img src="./images/cart.svg" alt="Shopping Cart Icon" />
           </div>
         </div>
-      </navbar>
+      </nav>
       <header class="landing_section">
         <div class="landing_section_cont">
           <div class="left_section">
@@ -54,8 +54,8 @@
             </h1>
             <p>
               JTGeats is a courier service in which authentic home
-              <span style="display: block"
-                >cook food is delivered to a customer.
+              <span style="display: block">
+                cook food is delivered to a customer.
               </span>
             </p>
             <div class="search_section">
@@ -77,14 +77,12 @@
     <section id="kitchen_section">
       <div class="kitchen_cont">
         <h1>Home kitchen</h1>
-
         <div class="product-grid"></div>
         <template class="product-card-grid">
           <div class="product-card">
             <div class="product-card__image-container">
               <img src="" alt="Pizza Image" />
             </div>
-
             <div class="product-card__details-container">
               <div class="product-card__header">
                 <p></p>
@@ -109,20 +107,19 @@
         </template>
       </div>
 
-       <section class="carousel-section">
+      <section class="carousel-section">
         <div class="carousel-heading">
           <h2>Popular Items</h2>
         </div>
-
         <div class="swiper product-carousel">
           <div class="swiper-wrapper"></div>
         </div>
-
         <div class="swiper-button-prev custom-nav-btn"></div>
         <div class="swiper-button-next custom-nav-btn"></div>
         <template id="product-card-template-carousel">
           <div class="swiper-slide">
             <div class="product-card">
+              <span class="discount-badge"></span>
               <div class="product-card__image-container">
                 <img src="" alt="Food Image" />
               </div>
@@ -149,13 +146,51 @@
             </div>
           </div>
         </template>
-
         <div class="action-btn-container">
-          <button class="action-btn">Request a Dish</button>
+          <button class="action-btn" id="request-dish-btn">
+            Request a Dish
+          </button>
         </div>
       </section>
-      </div>
     </section>
+
+    <div id="request-modal" class="modal-overlay">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Request a Custom Dish</h3>
+          <span class="close-modal-btn">&times;</span>
+        </div>
+        <form class="modal-form">
+          <label for="dish-name">Dish Name</label>
+          <input type="text" id="dish-name" name="dish-name" required />
+
+          <label for="dish-description">Description</label>
+          <textarea
+            id="dish-description"
+            name="dish-description"
+            rows="4"
+          ></textarea>
+
+          <label for="user-contact">Contact Info</label>
+          <input
+            type="text"
+            id="user-contact"
+            name="user-contact"
+            placeholder="Email or Phone"
+            required
+          />
+
+          <div class="modal-footer">
+            <button type="button" class="modal-btn" id="cancel-modal-btn">
+              Cancel
+            </button>
+            <button type="submit" class="modal-btn" id="submit-modal-btn">
+              Submit Request
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>
