@@ -73,27 +73,76 @@ const menu = [
     img: "./images/pizza11.png",
   },
 ];
-function renderMenu() {
-  const cont = document.body.querySelector(".product-grid");
-  const template = document.body.querySelector(".product-card-grid").content;
-  menu.forEach((item) => {
-    const clone = template.cloneNode(true);
-    clone.querySelector(".product-card__image-container img").src = item.img;
-    clone.querySelector(".product-card__header >p:first-child").textContent =item.dish;
-    clone.querySelector(".product-card__header-para").innerHTML= '&#8377;' + item.price;
-    clone.querySelector(".product-card__rating>p").textContent=item.rating;
-    cont.appendChild(clone);
+
+document.addEventListener("DOMContentLoaded", function () {
+  function renderMenu() {
+    const cont = document.body.querySelector(".product-grid");
+
+    const template = document.body.querySelector(".product-card-grid").content;
+
+    menu.forEach((item) => {
+      const clone = template.cloneNode(true);
+
+      clone.querySelector(".product-card__image-container img").src = item.img;
+      clone.querySelector(".product-card__header >p:first-child").textContent =
+        item.dish;
+      clone.querySelector(".product-card__header-para").innerHTML =
+        "&#8377;" + item.price;
+      clone.querySelector(".product-card__rating>p").textContent = item.rating;
+      cont.appendChild(clone);
+    });
+  }
+  renderMenu();
+
+  const swiperWrapper = document.querySelector(
+    ".product-carousel .swiper-wrapper"
+  );
+  const carouselTemplate = document.getElementById(
+    "product-card-template-carousel"
+  ).content;
+
+  function renderCarousel() {
+    menu.forEach((item) => {
+      const clone = carouselTemplate.cloneNode(true);
+
+      const card = clone.querySelector(".product-card");
+      card.querySelector(".product-card__image-container img").src = item.img;
+      card.querySelector(".product-name").textContent = item.dish;
+      card.querySelector(".product-price").innerHTML = `&#8377;${item.price}`;
+      card.querySelector(".product-rating").textContent = item.rating;
+
+      swiperWrapper.appendChild(clone);
+    });
+  }
+
+  renderCarousel();
+
+  const swiper = new Swiper(".product-carousel", {
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween: 25,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      300: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation:false,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 25,
+      },
+    },
   });
-}
-renderMenu();
-const swiper = new Swiper(".swiper", {
-  direction: "vertical",
-  loop: true,
-  pagination: {
-    el: ".swiper-pagination",
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
 });

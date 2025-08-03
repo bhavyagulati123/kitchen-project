@@ -22,7 +22,11 @@
 
 
 
-
+html,
+body {
+    position: relative;
+    height: 100%;
+}
 
 * {
     padding: 0;
@@ -219,6 +223,7 @@
     background-color: white;
     display: flex;
     flex-direction: column;
+    /* z-index: -10; */
     /* max-width: fit-content; */
 }
 
@@ -231,9 +236,9 @@
 
 .product-card__image-container {
 
-     width: 100%;
-  /* max-width: 277px; */
-  aspect-ratio: 277 / 250;
+    width: 100%;
+    /* max-width: 277px; */
+    aspect-ratio: 277 / 250;
     overflow: hidden;
 }
 
@@ -250,6 +255,7 @@
     line-height: 1.25;
     letter-spacing: -0.012em;
 }
+
 /* .product-card__header-para::before{
     content: '';
 } */
@@ -305,6 +311,127 @@
     display: flex;
     align-items: center;
 }
-.carousal{
-    /* max-width: var(--section-max-width); */
+
+.carousel-section {
+    padding: 80px 0;
+    padding-top: 0;
+    text-align: center;
+    background-color: #f8f8f8;
+    position: relative;
+    max-width: var(--section-max-width);
+    margin: 0 auto;
+    
+    /* color: black; */
+}
+.carousel-section *{
+    color: black;
+}
+.carousel-heading h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: clamp(2rem, 2vw + 1rem, 2.5rem);
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 60px;
+}
+.product-carousel{
+    max-width:65vw;
+}
+.swiper-slide>.product-card__image-container{
+    height: 50%;
+}
+/* Styling for the custom navigation arrows */
+.custom-nav-btn {
+    background-color: white;
+    width: 71px;
+    height: 71px;
+    border-radius: 50%;
+    color: white;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+    cursor: pointer;
+    /* position: absolute;
+    top: 50%; */
+    /* transform: translateY(-50%); */
+    border: 2px solid #169e5d;
+}
+
+.custom-nav-btn.swiper-button-prev {
+    left: -70px;
+}
+
+.custom-nav-btn.swiper-button-next {
+    right: -70px;
+}
+
+
+
+/* Disables the default Swiper arrow image */
+.swiper-button-prev,
+.swiper-button-next {
+    background-image: none !important;
+}
+
+/* Adds your custom arrow SVGs */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    content: '' !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 14px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.swiper-button-prev::after {
+    background-image: url("images/left.svg");
+}
+
+.swiper-button-next::after {
+    background-image: url("/images/left.svg");
+    transform: translate(-50%, -50%) scaleX(-1);
+}
+
+/* Swiper slides and content */
+.swiper-slide {
+    width: fit-content;
+    box-sizing: border-box;
+}
+
+
+
+.action-btn-container {
+    margin-top: 50px;
+}
+
+.action-btn {
+    background-color: #1ac073;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.action-btn:hover {
+    background-color: #169e5d;
+}
+
+/* Discount badge */
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #1ac073;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    z-index: 5;
 }

@@ -17,7 +17,7 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
   </head>
   <body>
@@ -87,14 +87,14 @@
 
             <div class="product-card__details-container">
               <div class="product-card__header">
-                <p>Home made pizza</p>
-                <p class="product-card__header-para">&#8377;</p>
+                <p></p>
+                <p class="product-card__header-para"></p>
               </div>
               <div class="product-card__footer">
                 <div class="product-card__meta">
                   <div class="product-card__rating">
                     <img src="./images/star.svg" alt="star icon" />
-                    <p>4.7</p>
+                    <p></p>
                   </div>
                   <div class="product-card__delivery-time">
                     <p>50-79 min</p>
@@ -109,11 +109,55 @@
         </template>
       </div>
 
-      <div class="carousal">
-       
+       <section class="carousel-section">
+        <div class="carousel-heading">
+          <h2>Popular Items</h2>
+        </div>
+
+        <div class="swiper product-carousel">
+          <div class="swiper-wrapper"></div>
+        </div>
+
+        <div class="swiper-button-prev custom-nav-btn"></div>
+        <div class="swiper-button-next custom-nav-btn"></div>
+        <template id="product-card-template-carousel">
+          <div class="swiper-slide">
+            <div class="product-card">
+              <div class="product-card__image-container">
+                <img src="" alt="Food Image" />
+              </div>
+              <div class="product-card__details-container">
+                <div class="product-card__header">
+                  <p class="product-name"></p>
+                  <p class="product-price"></p>
+                </div>
+                <div class="product-card__footer">
+                  <div class="product-card__meta">
+                    <div class="product-card__rating">
+                      <img src="./images/star.svg" alt="star icon" />
+                      <p class="product-rating"></p>
+                    </div>
+                    <div class="product-card__delivery-time">
+                      <p>50-79 min</p>
+                    </div>
+                  </div>
+                  <div class="product-card__add-to-cart">
+                    <img src="./images/add_item.svg" alt="Plus Icon" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </template>
+
+        <div class="action-btn-container">
+          <button class="action-btn">Request a Dish</button>
+        </div>
+      </section>
       </div>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   </body>
 </html>
