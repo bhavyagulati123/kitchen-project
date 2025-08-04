@@ -96,7 +96,8 @@ document.addEventListener("DOMContentLoaded", function () {
         item.dish;
       clone.querySelector(".product-card__header-para").innerHTML =
         "&#8377;" + item.price;
-      clone.querySelector(".product-card__rating > p").textContent = item.rating;
+      clone.querySelector(".product-card__rating > p").textContent =
+        item.rating;
       cont.appendChild(clone);
     });
   }
@@ -188,49 +189,48 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
-
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
-
-  const video = document.getElementById('myVideo');
-  const playPauseBtn = document.getElementById('play-pause-btn');
-  const videoPlayer = document.querySelector('.video-player');
+document.addEventListener("DOMContentLoaded", () => {
+  const video = document.getElementById("myVideo");
+  const playPauseBtn = document.getElementById("play-pause-btn");
+  const videoPlayer = document.querySelector(".video-player");
 
   function togglePlayPause() {
     if (video.paused || video.ended) {
       video.play();
-      videoPlayer.classList.remove('paused');
+      videoPlayer.classList.remove("paused");
     } else {
       video.pause();
-      videoPlayer.classList.add('paused');
+      videoPlayer.classList.add("paused");
     }
   }
 
   // Event listener for the custom button
-  playPauseBtn.addEventListener('click', togglePlayPause);
-  
+  playPauseBtn.addEventListener("click", togglePlayPause);
+
   // Event listener for the video itself (clicking the video also toggles)
-  video.addEventListener('click', togglePlayPause);
+  video.addEventListener("click", togglePlayPause);
 
   // Event listener to change the button icon
-  video.addEventListener('play', () => {
-    playPauseBtn.innerHTML = '';
-    videoPlayer.classList.remove('paused');
+  video.addEventListener("play", () => {
+    playPauseBtn.innerHTML = "";
+    videoPlayer.classList.remove("paused");
   });
 
-  video.addEventListener('pause', () => {
+  video.addEventListener("pause", () => {
     playPauseBtn.innerHTML = '<img src="/images/plaay.svg" alt="">';
-    videoPlayer.classList.add('paused');
+    videoPlayer.classList.add("paused");
   });
 
   // Event listener to reset the icon when the video ends
-  video.addEventListener('ended', () => {
+  video.addEventListener("ended", () => {
     playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
-    videoPlayer.classList.add('paused');
+    videoPlayer.classList.add("paused");
   });
 });
 
+const hamburger = document.body.querySelector(".hamburger_icon");
+const hamburger_cont = document.body.querySelector(".hamburger_cont");
 
+hamburger.addEventListener("click", () => {
+  hamburger_cont.classList.toggle("is-active");
+});
